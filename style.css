@@ -1,0 +1,1414 @@
+/* CSS Reset */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+
+/* Navigation bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    
+}
+#navbar::before{
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    /* opacity: 0.4; */
+}
+
+/* Navigation bar: logo and Images */
+#logo{
+    margin: 8px 27px;
+    color: #cc005f;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+/* #logo img{
+    height: 90px;
+    margin: 3px 5px;
+    
+} */
+
+/* Navigation bar: List Styling */
+/* #navbar{
+    position: relative;
+} */
+
+.menu-box{
+    width: 0;
+    height: 0;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    border-bottom-left-radius: 100%; 
+    transition: width 0.5s, height 0.5s, border-radius ;  
+}
+.menu-box.open-menu{
+    width: 100%;
+    height: 100vh;
+    border-bottom-left-radius: 0;
+}
+
+
+/* #navbar .menu-box ul{
+    display: flex;
+    
+} */
+
+
+
+#navbar .menu-box ul li{
+    list-style: none;
+    font-size: 2rem;
+}
+
+#navbar .menu-box ul li a{
+    display: block;
+    color: white;
+    padding: 3px 30px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: all 1s ease-in-out transform 0.5s;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+
+#navbar .menu-box ul li a:hover{
+    color: #cc005f;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-6px);
+    
+}
+#navbar .menu-box ul li .active{
+    color: #cc005f;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+#menuIcon{
+    width: 60px;
+    border-radius: 50%;
+    position: fixed;
+    top: 7px;
+    right: 60px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+
+/* Home Section */
+
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 120px;
+   
+}
+
+.home::before{
+    content: "";
+    position: absolute;
+    background: url('images/bg.jpg') no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    /* opacity: 0.50; */
+}
+
+.home h5{
+    color: #cc005f;
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+    letter-spacing: .2rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.home h1{
+    font-size: 4.6rem;
+    margin-bottom: 0.6rem;
+    color: white; 
+    font-family: 'Ubuntu', sans-serif;  
+    
+}
+
+.home p{
+    font-size: 1.7rem;
+    line-height: 2.4rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    color: #FFFFFF;
+    text-shadow: 0 0 6px rgb(0 0 0 / 20%);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.home button{
+    padding: 20px;
+    margin: 10px;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    border: 2px solid rgb(131, 125, 125);
+    background: transparent;
+    cursor: pointer;
+    letter-spacing: .25rem;
+    transition: all 1s ease-in-out;
+    font-family: 'Ubuntu', sans-serif;
+}
+.home button:hover{
+   border-color: #cc005f;
+   transition: all 1s ease-in-out;
+}
+
+.home button a{
+    background: transparent;
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+
+/* Portfolio Section */
+
+.portfolio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 70px;
+    background: #f2f2f2;
+}
+
+.portfolio h5{
+    color: #cc005f;
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+    letter-spacing: .2rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.portfolio h1{
+    font-size: 4rem;
+    margin-bottom: 0.6rem;
+    color: Black;
+    font-family: 'Ubuntu', sans-serif;
+    
+}
+
+.portfolio p{
+    font-size: 2rem;
+    line-height: 1.8;
+    color: #888888;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.portfolio button{
+    padding: 20px;
+    margin: 10px;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    border: 2px solid rgb(131, 125, 125);
+    background: transparent;
+    cursor: pointer;
+    letter-spacing: .25rem;
+    transition: all 1s ease-in-out;
+    font-family: 'Ubuntu', sans-serif;
+}
+.portfolio button:hover{
+   border-color: black;
+   transition: all 1s ease-in-out;
+}
+
+.portfolio button a{
+    /* background-color: black; */
+    color: black;
+    text-decoration: none;
+} 
+
+
+
+#image-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: -70px;
+    background: #f2f2f2;
+}
+
+.imgbox{
+    width: 400px;
+    margin: 50px;
+    padding-bottom: 100px;
+    position: relative;
+    
+}
+
+.imgbox .box-img{
+    transform: rotateY(0);
+    transition: all 0.5s ease-in-out;
+}
+
+.imgbox:hover .box-img{
+    transform: rotateY(-90deg);
+
+}
+
+.imgbox .box-img img{
+    height: 450px;
+    width: 450px;
+    margin: 20px;
+}
+.imgbox .box-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 390px;
+    height: 390px;
+    text-align: center;
+    margin-left: 25px;
+    margin-top: 25px;
+    padding: 60px 20px;
+    box-sizing: border-box;
+    /* text-align: center; */
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: rotateY(90deg);
+    transition: all 0.5s ease-in-out;  
+}
+.imgbox:hover .box-content{
+    transform: rotateY(0deg);
+}
+.imgbox .box-content p a{
+    color: white;
+}
+
+
+.imgbox1{
+    width: 400px;
+    margin: 50px;
+    padding-bottom: 100px;
+    position: relative;
+    
+}
+
+.imgbox1 .box-img1{
+    transform: rotateY(0);
+    transition: all 0.5s ease-in-out;
+}
+
+.imgbox1:hover .box-img1{
+    transform: rotateY(-90deg);
+
+}
+
+.imgbox1 .box-img1 img{
+    height: 450px;
+    width: 450px;
+    margin: 20px;
+}
+.imgbox1 .box-content1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 390px;
+    height: 390px;
+    text-align: center;
+    margin-left: 25px;
+    margin-top: 25px;
+    padding: 60px 20px;
+    box-sizing: border-box;
+    /* text-align: center; */
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: rotateY(90deg);
+    transition: all 0.5s ease-in-out; 
+    font-family: 'Ubuntu', sans-serif; 
+}
+.imgbox1:hover .box-content1{
+    transform: rotateY(0deg);
+}
+.imgbox1 .box-content1 p a{
+    color: white;
+}
+
+#image-box1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: -70px;
+    margin-top: -170px;
+    background: #f2f2f2;
+}
+
+
+
+
+  
+
+/* Services Section */
+
+.services{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 120px;
+    margin-top: 120px;
+}
+
+.services::before{
+    content: "";
+    position: absolute;
+    background: url('images/bg1.jpg') no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    /* opacity: 0.50; */
+}
+
+.services h5{
+    color: #cc005f;
+    font-size: 3rem;
+    margin-bottom: 0.3rem;
+    letter-spacing: .2rem;
+    font-family: 'Ubuntu', sans-serif;
+    margin-bottom: 27px;
+}
+
+.services h1{
+    font-size: 4rem;
+    margin-bottom: 0.6rem;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    margin-bottom: 250px;
+    
+}
+
+
+
+
+section .web{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-top: -200px;
+    
+}
+section .web .web1{
+    margin: 10px;
+    padding: 30px;
+    background: rgb(239, 238, 238);
+    border-radius: 20px;
+}
+
+section .web .web1 img{
+    border-radius: 20px;
+}
+section .web .web1 h5{
+    height: 1px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+
+section .web .web2{
+    margin: 10px;
+    padding: 30px;
+    background: rgb(239, 238, 238);
+    border-radius: 20px;
+}
+section .web .web2 img{
+    border-radius: 20px;
+}
+section .web .web2 h5{
+    height: 1px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+section .web .web3{
+    margin: 10px;
+    padding: 30px;
+    background: rgb(239, 238, 238);
+    border-radius: 20px;
+}
+section .web .web3 img{
+    height: 180px;
+    width: 270px;
+    border-radius: 20px;
+}
+section .web .web3 h5{
+    height: 1px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+
+
+
+
+
+
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #990047;
+}
+.box h1{
+    padding: 90px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+.box h1 p{
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.box1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 100px;
+}
+
+.hire{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px;
+    flex-direction: column;
+    background: black;
+    border: 2px solid black;  
+}
+
+.hire h1{
+    font-size: 3rem;
+    margin-bottom: 0.6rem;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.hire button{
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    border: 2px solid rgb(131, 125, 125);
+    background: transparent;
+    cursor: pointer;
+    letter-spacing: .25rem;
+    transition: all 1s ease-in-out;
+}
+.hire button:hover{
+    background: #990047;
+    color: white;
+   transition: all 1s ease-in-out;
+}
+
+/* About Section */
+
+.about{
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: black;
+}
+
+.about h5{
+    color: #cc005f;
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+    letter-spacing: .2rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.about h1{
+    font-size: 4rem;
+    margin-bottom: 0.6rem;
+    color: white;  
+    font-family: 'Ubuntu', sans-serif; 
+}
+
+
+.intro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+
+}
+
+.intro p{
+    font-size: 1.5rem;
+    text-align: center;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+.intro img{
+    height: 200px;
+    border-radius: 50px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.profile{
+    display: flex;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+    background: #f2f2f2
+}
+
+.profile .skill1{
+    width: 500px;
+    height: 500px;
+    margin: 10px;
+    padding: 10px;
+
+}
+
+.profile .skill1 p{
+    font-size: 20px;
+    line-height: 1.8;
+    color: #888888;
+    font-family: 'Ubuntu', sans-serif; 
+    text-decoration: underline;
+}
+
+
+
+.profile .skill2{
+    width: 500px;
+    height: 500px;
+    padding: 10px;
+}
+
+.profile .skill2 p{
+    font-size: 20px;
+    line-height: 1.8;
+    color: #888888;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.profile .skill2 ul li{
+    text-decoration: underline;
+}
+.profile .skill2 ul li:hover{
+    color: #888888;
+    cursor: pointer;
+}
+
+.profile .skill2 ul li h3{
+    margin-left: 10px;
+    font-size: 1rem;
+    
+}
+
+/* Contact Section */
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    background: black;
+}
+
+
+.contact h5{
+    color: #cc005f;
+    font-size: 2.5rem;
+    margin-bottom: 0.3rem;
+    letter-spacing: .2rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.contact h1{
+    font-size: 4rem;
+    margin-bottom: 0.6rem;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    
+}
+
+.contact p{
+    font-size: 1.8rem;
+    line-height: 1.5;
+    color: #888888;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.contact input[type=text], input[type=email], textarea{
+    padding: 20px 50px;
+    margin: 20px;
+    font-size: 20px;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    background: transparent;
+    color: rgba(255, 255, 255, 0.7);
+    outline: none;
+    transition: all 0.4s ease-in-out;
+    appearance: none;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.contact textarea{
+    padding: 20px 50px;
+    margin: 20px;
+    font-size: 20px;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    background: transparent;
+    color: rgba(255, 255, 255, 0.7);
+    outline: none;
+    transition: all 0.4s ease-in-out;
+    appearance: none;
+    font-family: 'Ubuntu', sans-serif;
+}
+.contact button{
+    font-size: 1.5rem;
+    display: block;
+    letter-spacing: .2rem;
+    height: 5rem;
+    line-height: 5rem;
+    padding: 0 1rem;
+    margin-top: 4.8rem;
+    width: 48%;
+    background: #FF0077;
+    color: #FFFFFF;
+    transition: all 1s ease-in-out;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.contact button:hover{
+    transition: all 1s ease-in-out;
+    background: #910546;
+}
+
+.contact .address{
+    display: flex;
+    padding: 80px;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact .address .add1{
+    color: white;
+    width: 300px;
+    height: 300px;
+    margin: 15px;
+    padding: 15px;
+}
+
+.contact .address .add2{
+    color: white;
+    width: 300px;
+    height: 300px;
+    margin: 15px;
+    padding: 15px;
+}
+
+.contact .address .add3{
+    color: white;
+    width: 300px;
+    height: 300px;
+    margin: 15px;
+    padding: 15px;
+}
+
+.contact .address .add1 img{
+    height: 100px;
+    padding: 0 95px;
+    
+}
+
+.contact .address .add1 h5{
+    color: #cc005f;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    letter-spacing: .2rem;
+    text-align: center;
+    padding: 5px 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.contact .address .add1 p{
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #888888;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.contact .address .add2 img{
+    height: 90px;
+    padding: 5px 100px;   
+}
+
+.contact .address .add2 h5{
+    color: #cc005f;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    letter-spacing: .2rem;
+    text-align: center;
+    padding: 5px 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.contact .address .add2 p{
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #888888;
+    text-align: center;
+    padding: 15px 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.contact .address .add3 img{
+    height: 90px;
+    padding: 5px 100px;   
+}
+
+.contact .address .add3 h5{
+    color: #cc005f;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    letter-spacing: .2rem;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.contact .address .add3 p{
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #888888;
+    text-align: center;
+    padding: 15px 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* Resume Section */
+
+.resume{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 250px;
+    background: #f2f2f2
+    
+}
+
+.resume h5{
+    color: #cc005f;
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+    letter-spacing: .2rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.resume h1{
+    font-size: 4rem;
+    margin-bottom: 0.6rem;  
+    font-family: 'Ubuntu', sans-serif; 
+}
+
+.resume p{
+    font-size: 1.8rem;
+    line-height: 1.6;
+    color: #888888;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.exp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #f2f2f2;
+    
+}
+
+.exp h5{
+    color: #cc005f;
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+    letter-spacing: .2rem;  
+    font-family: 'Ubuntu', sans-serif;
+    /* margin-top: -100px; */
+}
+
+.work{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f2f2f2;
+    /* margin-top: -100px; */
+}
+
+.work .work1{
+    height: 300px;
+    width: 400px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.work .work1 img{
+    height: 130px;
+    padding: 0 130px;
+}
+
+.work .work1 h3{
+    margin: 10px;
+    padding: 0px 110px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.work .work2{
+    height: 300px;
+    width: 400px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.work .work2 h3{
+    padding: 50px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.work .work2 p{
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+    color: #888888; 
+    font-family: 'Ubuntu', sans-serif; 
+    margin-left: 50px; 
+}
+
+.a-work{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f2f2f2
+}
+
+.a-work .work3{
+    height: 300px;
+    width: 400px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.a-work .work3 img{
+    height: 130px;
+    padding: 0 130px;
+}
+
+.a-work .work3 h3{
+    margin: 10px;
+    padding: 0px 110px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.a-work .work4{
+    height: 300px;
+    width: 400px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.a-work .work4 h3{
+    padding: 50px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.a-work .work4 p{
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+    color: #888888;   
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 50px;
+}
+
+.b-work{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f2f2f2
+}
+
+.b-work .work5{
+    height: 300px;
+    width: 400px;
+    margin: 10px;
+    padding: 10px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.b-work .work5 img{
+    height: 130px;
+    padding: 0 130px;
+}
+
+.b-work .work5 h3{
+    margin: 10px;
+    padding: 0px 110px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.b-work .work6{
+    height: 300px;
+    width: 400px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.b-work .work6 h3{
+    padding: 50px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.b-work .work6 p{
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+    color: #888888; 
+    font-family: 'Ubuntu', sans-serif;  
+    margin-left: 50px;
+}
+
+.work .work2 p a{
+    color: black;
+}
+.a-work .work4 p a{
+    color: black;
+}
+.b-work .work6 p a{
+    color: black;
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f2f2f2;
+}
+
+.button button{
+    padding: 20px;
+    font-size: 20px;
+    transition: all 1s ease-in-out;
+    cursor: pointer;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.button button a{
+   text-decoration: none; 
+    color: black;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.button button a:hover{
+    color: black;
+    border-color: #cc005f;
+    transition: all 1s ease-in-out;
+
+    
+    
+ }
+
+.button button:hover{
+   
+    color: #FFFFFF;
+    border-color: #cc005f;
+    transition: all 1s ease-in-out;
+ }
+
+
+ .educate{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #f2f2f2;
+    padding: 50px;
+}
+
+.educate h5{
+    color: #cc005f;
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+    letter-spacing: .2rem;  
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+ .education{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f2f2f2;
+}
+
+.education .edu1{
+    height: 300px;
+    width: 400px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.education .edu1 img{
+    height: 130px;
+    padding: 0 130px;
+}
+
+.education .edu1 h3{
+    margin: 10px;
+    padding: 0px 110px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.education .edu2{
+    height: 300px;
+    width: 400px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.education .edu2 h3{
+    padding: 50px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.education .edu2 p{
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+    color: #888888;   
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.a-education{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f2f2f2
+}
+
+.a-education .edu3{
+    height: 300px;
+    width: 400px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.a-education .edu3 img{
+    height: 130px;
+    padding: 0 130px;
+}
+
+.a-education .edu3 h3{
+    margin: 10px;
+    padding: 0px 110px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.a-education .edu4{
+    height: 300px;
+    width: 400px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.a-education .edu4 h3{
+    padding: 50px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.a-education .edu4 p{
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+    color: #888888;   
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.b-education{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f2f2f2
+}
+
+.b-education .edu5{
+    height: 300px;
+    width: 400px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.b-education .edu5 img{
+    height: 130px;
+    padding: 0 130px;
+}
+
+.b-education .edu5 h3{
+    margin: 10px;
+    padding: 0px 100px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.b-education .edu6{
+    height: 300px;
+    width: 400px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.b-education .edu6 h3{
+    padding: 50px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.b-education .edu6 p{
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+    color: #888888;   
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+
+
+
+
+ .head h1{
+    text-align: center;
+    font-size: 3rem;
+    padding: 30px;
+    font-family: 'Ubuntu', sans-serif;
+ }
+
+
+/* Work Section */
+
+.mywork{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 30px;
+   /* padding: 10px;  */
+}
+
+.mywork .m-work1{
+    border: 2px solid brown;
+    padding: 30px;
+    margin: 3px 6px;
+    border-radius: 28px;
+    background: #f2f2f2; 
+}
+
+.mywork .m-work1 img{
+    height: 355px;
+    display: block;
+    margin: auto;
+   
+}
+
+.mywork .m-work2{
+    border: 2px solid brown;
+    padding: 30px;
+    margin: 3px 6px;
+    border-radius: 28px;
+    background: #f2f2f2;
+}
+
+.mywork .m-work2 img{
+    height: 355px;
+    width: 420px;
+    display: block;
+    margin: auto;
+   
+}
+
+
+.a-mywork{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px; 
+ }
+ 
+ .a-mywork .am-work1{
+    border: 2px solid brown;
+    padding: 30px;
+    margin: 3px 6px;
+    border-radius: 28px;
+    background: #f2f2f2; 
+ }
+
+ .a-mywork .am-work1 img{
+    height: 355px;
+    width: 420px;
+    display: block;
+    margin: auto;
+   
+}
+ 
+ .a-mywork .am-work2{
+    border: 2px solid brown;
+    padding: 30px;
+    margin: 3px 6px;
+    border-radius: 28px;
+    background: #f2f2f2;
+ }
+
+ .a-mywork .am-work2 img{
+    height: 355px;
+    width: 420px;
+    display: block;
+    margin: auto;
+   
+}
+ 
+ 
+ .b-mywork{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px; 
+ }
+ 
+ .b-mywork .bm-work1{
+    border: 2px solid brown;
+    padding: 30px;
+    margin: 3px 6px;
+    border-radius: 28px;
+    background: #f2f2f2;
+ }
+
+ .b-mywork .bm-work1 img{
+    height: 355px;
+    display: block;
+    width: 420px;
+    margin: auto;
+   
+}
+ 
+ .b-mywork .bm-work2{
+    border: 2px solid brown;
+    padding: 30px;
+    margin: 3px 6px;
+    border-radius: 28px;
+    background: #f2f2f2;
+ }
+
+ .b-mywork .bm-work2 img{
+    height: 355px;
+    width: 420px;
+    display: block;
+    margin: auto;
+   
+}
+ 
+ .CV{
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+ }
+
+ .CV button{
+    padding: 20px;
+    font-size: 20px;
+    transition: all 1s ease-in-out;
+    cursor: pointer;
+    font-family: 'Ubuntu', sans-serif;
+    border-color: #888888;
+ }
+
+ .CV button:hover{
+    border-color: black;
+    transition: all 1s ease-in-out;
+ }
+
+/* Footer */
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    margin-top: -167px;
+}
+.footer h1{
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 0.6rem; 
+    padding: 30px;
+    font-family: 'Ubuntu', sans-serif;  
+}
+.footer p{
+    font-size: 1.5rem;
+    line-height: 1.4;
+    color: #888888;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: .1rem;
+}
+
+.web-icons{
+    background: black;
+    padding-left: 10px;
+}
+
+
+
+
+
+
+  
+
+
+
+
+

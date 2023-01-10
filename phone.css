@@ -1,0 +1,397 @@
+/* Navigation bar */
+
+html, body{
+    overflow-x: hidden;
+}
+
+#navbar{
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+   
+
+}
+/*  
+#navbar ul li{
+    font-size: 1rem;
+    margin-left: -10px;
+
+    
+}
+#navbar ul li a{
+    padding: 9px;
+    
+    
+} */
+
+#menuIcon{
+    width: 60px;
+    border-radius: 50%;
+    position: fixed;
+    top: 5px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+/* Home Section */
+#home{
+    overflow: hidden;
+}
+.home{
+    height: 480px;
+    text-align: center;
+    padding-top: 227px;
+}
+/* .home::before{
+    height: 880px;
+    
+} */
+.home h5{
+    font-size: 1.3rem;
+}
+.home h1{
+    font-size: 2.5rem;
+}
+.home p{
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+.home button{
+    padding: 15px;
+    margin: 15px;
+    font-size: 15px;
+    width: 208px;
+}
+
+/* Porfolio Section */
+.portfolio h1{
+    font-size: 2rem;
+    text-align: center;
+    width: 340px;
+
+}
+.portfolio p{
+    font-size: 1.4rem;
+    line-height: 1.4;
+    width: 365px;
+}
+.portfolio button{
+    padding: 15px;
+    margin: 7px;
+    font-size: 15px;
+   
+}
+
+#image-box{
+    flex-direction: column;   
+}
+.imgbox1 .box-img1 img{
+    margin-top: -160px;
+}
+#image-box1{
+    flex-direction: column;   
+}
+
+.imgbox1 .box-content1{
+    margin-top: -155px;  
+}
+
+
+/* Services Section */
+#services{
+    overflow: hidden;
+}
+.services{
+    height: 400px;
+    padding: 60px;
+}
+.services::before{
+    height: 500px;
+}
+.services h5{
+    font-size: 2.3rem;
+    margin-top: 100px;
+}
+.services h1{
+    font-size: 2.3rem;
+    text-align: center;
+}
+.services p{
+    font-size: 1.4rem;
+    line-height: 1;
+    /* text-align: center; */
+}
+
+section .web{
+    flex-direction: column;
+    margin-top: 73px;
+}
+
+
+.box{
+    flex-direction: column;
+}
+.box h1{
+    padding: 20px;
+}
+.box h1 p{
+    font-size: 25px;
+    
+}
+
+.hire h1{
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+/* About Section */
+#about{
+    overflow: hidden;
+}
+.about h1{
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.intro{
+    flex-direction: column;
+}
+.intro p{
+    font-size: 1.1rem;
+}
+
+.profile{
+    flex-direction: column;
+}
+
+.profile .skill1{
+    margin-left: 200px;
+}
+.profile .skill2{
+    margin-left: 200px;
+    margin-top: -100px;
+    margin-bottom: -250px;
+}
+
+/* Work Section */
+
+.exp h5{
+    margin-top: 150px;
+}
+.work{
+    flex-direction: column;
+}
+.work .work1 h3{
+    margin-top: -10px;
+    margin-left: 30px;
+}
+
+.work .work2 h3{
+    margin-top: -150px;
+    margin-left: 20px;
+    text-align: center;
+}
+.work .work2 p{
+    margin-top: -16px;
+    margin-left: 30px;
+    text-align: center;
+}
+.work .work2 p a{
+    color: black;
+}
+
+.a-work{
+    flex-direction: column;
+    margin-top: -250px;
+}
+
+.a-work .work3 h3{
+    margin-top: -10px;
+    margin-left: 30px;
+}
+
+.a-work .work4 h3{
+    margin-top: -150px;
+    margin-left: 20px;
+    text-align: center;
+}
+.a-work .work4 p{
+    margin-top: -16px;
+    margin-left: 30px;
+    text-align: center;
+}
+.a-work .work4 p a{
+    color: black;
+}
+
+.b-work{
+    flex-direction: column;
+    margin-top: -250px;
+}
+
+.b-work .work5 h3{
+    margin-top: -10px;
+    margin-left: 30px;
+    
+}
+
+.b-work .work6 h3{
+    margin-top: -150px;
+    margin-left: 20px;
+    text-align: center;
+}
+.b-work .work6 p{
+    margin-top: -16px;
+    margin-left: 30px;
+    text-align: center;
+}
+.b-work .work6 p a{
+    color: black;
+}
+
+.button button {
+    margin-top: -300px;
+}
+
+.educate h5{
+    margin-top: -50px;
+}
+
+.education{
+    flex-direction: column;
+}
+.education .edu1 h3{
+    margin-top: -10px;
+    margin-left: 30px;
+}
+
+.education .edu2 h3{
+    margin-top: -150px;
+    margin-left: 20px;
+    text-align: center;
+}
+.education .edu2 p{
+    margin-top: -16px;
+    margin-left: 30px;
+    text-align: center;
+}
+
+.a-education{
+    flex-direction: column;
+    margin-top: -250px;
+}
+
+.a-education .edu3 h3{
+    margin-top: -10px;
+    margin-left: 30px;
+}
+
+.a-education .edu4 h3{
+    margin-top: -150px;
+    margin-left: 20px;
+    text-align: center;
+}
+.a-education .edu4 p{
+    margin-top: -16px;
+    margin-left: 30px;
+    text-align: center;
+}
+
+.b-education{
+    flex-direction: column;
+    margin-top: -250px;
+    margin-bottom: -240px;
+}
+
+.b-education .edu5 h3{
+    margin-top: -10px;
+    margin-left: 5px;
+    
+}
+
+.b-education .edu6 h3{
+    margin-top: -150px;
+    margin-left: 20px;
+    /* text-align: center; */
+}
+.b-education .edu6 p{
+    margin-top: -16px;
+    margin-left: 30px;
+    text-align: center;
+}
+
+
+/* Contact Section */
+#contact{
+    overflow: hidden;
+}
+.contact h1{
+    font-size: 1.8rem;
+    text-align: center;
+    margin-top: 50px;
+}
+.contact p{
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 1;
+}
+
+.contact input[type=text], input[type=email], textarea{
+    padding: 15px 35px;
+    margin: 15px;
+    font-size: 15px;
+}
+
+.contact textarea{
+    padding: 15px 35px;
+    margin: 15px;
+    font-size: 15px;
+}
+
+.contact button{
+    font-size: 1rem;
+    display: block;
+    letter-spacing: .1rem;
+    height: 3rem;
+    line-height: 3rem;
+    width: 60%;
+} 
+.contact .address .add2 {
+    margin-top: -82px;
+}
+
+.contact .address .add3 { 
+    margin-top: -82px;
+}
+
+.address{
+    flex-direction: column;
+}
+.contact .address .add1 img{
+    padding: 0 80px;
+}
+.contact .address .add1 p{
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+.contact .address .add2 p{
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+.contact .address .add3 p{
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+
+/* Footer Section */
+.footer h1{
+    font-size: 2rem;
+}
+.footer p{
+    font-size: 1.5rem;
+}
+
